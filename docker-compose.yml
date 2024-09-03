@@ -1,0 +1,16 @@
+version: '3.8'
+
+services: 
+  pruebatecnica:
+    image: pruebatecnicak:latest
+    build: 
+      context: .
+      dockerfile: src/Web.Api/Dockerfile
+    volumes:
+      - ./src/Web.Api/app.db:/app/app.db
+    environment:
+      #- ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "9696:8080"
+    restart: always

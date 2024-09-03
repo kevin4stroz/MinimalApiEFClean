@@ -1,6 +1,27 @@
-@api_attacking_sharp_HostAddress = http://localhost:5274
+@api_prueba_tecnica = http://localhost:9696
 
-GET {{api_attacking_sharp_HostAddress}}/weatherforecast/
+### Get all Category of questions
+GET {{api_prueba_tecnica}}/api/quiz/category
 Accept: application/json
 
-###
+### Get Questions by categoryId if its null get all questions
+GET {{api_prueba_tecnica}}/api/quiz/questions?categoryId=1
+Accept: application/json
+
+### Create new questions
+POST {{api_prueba_tecnica}}/api/quiz/questions
+Accept: application/json
+
+{
+  "question": "string",
+  "choices": [
+    "string"
+  ],
+  "answerIndex": 0,
+  "score": 0,
+  "categoryId": 0
+}
+
+### Delete a question by questionId
+DELETE {{api_prueba_tecnica}}/api/quiz/questions?questionId=9
+Accept: application/json
