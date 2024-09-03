@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Web.Application.Dto\Web.Application.Dto.csproj" />
+    <ProjectReference Include="..\Web.Domain.Interfaces\Web.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\Web.Infraestructure.Interfaces\Web.Infraestructure.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
